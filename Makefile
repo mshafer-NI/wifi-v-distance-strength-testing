@@ -8,8 +8,8 @@ all: $(REPORTS) docs/index.html
 docs:
 	mkdir -p docs
 
-docs/index.html: docs
-	python tools/markdown_to_html.py README.md -o docs/index.html
+docs/index.html: docs $(wildcard tools/*) *.md
+	python tools/markdown_to_html.py README.md --append-file index.md -o docs/index.html
 
 $(REPORTS): docs/%.html: export_%.sh | docs
 	sh $<
