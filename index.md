@@ -4,7 +4,7 @@ Take a look at [charts](charts.html) and [the source notebook](notebook.html) to
 
 ## Data
 
-Raw data is stored in https://github.com/mshafer-ni/wifi-v-distance-strength-testing/data_files
+Raw data is stored in [https://github.com/mshafer-ni/wifi-v-distance-strength-testing/data_files](https://github.com/mshafer-ni/wifi-v-distance-strength-testing/data_files)
 
 ## Testing Methodology
 
