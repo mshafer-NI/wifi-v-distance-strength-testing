@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "wifi-v-distance-strength-testing"
+version = "0.1.0"
+description = "Visualizations on Wi-Fi signal strength vs distance"
+authors = ["mshafer-NI <matthew.shafer@ni.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false # we're just using this for the dependencies
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "<2"
+pandas = "^2.2.2"
+plotly = "^5.24.1"
+jupyterlab = "^4.2.5"
+statsmodels = "^0.14.3"
+markdown = "^3.7"
+click = "^8.1.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
