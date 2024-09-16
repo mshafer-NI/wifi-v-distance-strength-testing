@@ -9,10 +9,10 @@ docs:
 	mkdir -p docs
 
 docs/index.html: docs
-	pandoc -s README.md -o docs/index.html
+	python tools/markdown_to_html.py README.md -o docs/index.html
 
-$(REPORTS): docs/%.html: export_%.py
-	python $< $@
+$(REPORTS): docs/%.html: export_%.sh | docs
+	sh $<
 
 clean:
 	rm -rf docs
