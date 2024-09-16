@@ -1,0 +1,34 @@
+<h1>wifi-v-distance-strength-testing</h1>
+<p>Publishing data from testing Wi-Fi vs distance signal strength testing</p>
+<h2>Why?</h2>
+<p>For years, I looked online for relational graphing of how Wi-Fi signal strength deteriated over distance.
+I was aware of <a href="https://www.everythingrf.com/rf-calculators/free-space-path-loss-calculator">Free Space Path Loss</a> formula stating that it should be logarithmic, but I still had questions.</p>
+<ul>
+<li>How far from an access point can I connect to a 2.4 GHz access point? How does 5 GHz compare?</li>
+<li>How do I compare which signal will be stronger? for how far?</li>
+<li>How fast can these bands handle at different ranges?</li>
+</ul>
+<p>I could never find anything besides "theoretical maximum"...</p>
+<h2>Reports/output</h2>
+<p>Take a look at <a href="charts.html">charts</a> and <a href="notebook.html">the source notebook</a> to see the graphs.</p>
+<h2>Data</h2>
+<p>Raw data is stored in https://github.com/mshafer-ni/wifi-v-distance-strength-testing/data_files</p>
+<h2>Testing Methodology</h2>
+<ol>
+<li>A DIR-820L D-Link access point (AC1200 Dual Band - DIR-820LB1) was placed on the ground in an open park (powered by a Ryobi One+ 18V inverter)</li>
+<li>A 200' tape measure was run out from the access point.</li>
+<li>A Motorala Edge (2022) was used to run the Ubiquiti WiFiman app to take measurements.</li>
+<li>The phone was placed with screen up, top-towards the the access point, on the ground, with the top at the measurement point.</li>
+<li>The phone was given 10 Seconds to stabilize the reading</li>
+<li>Numbers were hand recorded as they were reported until at least 5 reported values were all previously seen.</li>
+</ol>
+<h2>Visualization method</h2>
+<ol>
+<li>To plot the data from this recording method, the median value from each reading was plotted with the <code>max(max(values) - median), median - min(values))</code> value used for error.</li>
+</ol>
+<h2>Observed issues</h2>
+<ol>
+<li>The app/phone updated more frequently if the network was connected; however, maintaining that connection was difficult. It may be good to repeat without connecting to the network.</li>
+<li>As many as 7 other 2.4GHz networks could be seen at times (too far away to connect, although the desired access point was no longer the strongest observed signal beyond 150')</li>
+<li>The Access Point chose channel 3. 4 of the observed other networks were on channel 3 as well (in conflict).</li>
+</ol>
